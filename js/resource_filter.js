@@ -12,6 +12,17 @@ const course_drop = document.getElementById("course_drop")
 const sub_drop = document.getElementById("sub_drop")
 const sem_drop = document.getElementById("sem_drop")
 
+let wake_url = "https://pastoral-storm-bard.glitch.me/wakeup"
+
+async function wakeup(){
+    let response = await fetch(wake_url, {
+        method: 'GET',
+    });
+    let responseText = await response.text();
+    console.log(responseText);
+}
+wakeup();
+
 function display_options(n) {
 
     let arrow = document.getElementsByClassName("arrow")[n];

@@ -4,8 +4,18 @@ const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 
 let ind = -1;
-
 let initial;
+
+let wake_url = "https://pastoral-storm-bard.glitch.me/wakeup"
+
+async function wakeup(){
+    let response = await fetch(wake_url, {
+        method: 'GET',
+    });
+    let responseText = await response.text();
+    console.log(responseText);
+}
+wakeup();
 
 function switch_slides(){
     for (let i = 0; i < slides.length; i++){

@@ -18,6 +18,16 @@ document.getElementById("subject").textContent = subject;
 let ind;
 // let url = "http://localhost:8080/fetchData";
 let url = "https://pastoral-storm-bard.glitch.me/fetchData"
+let wake_url = "https://pastoral-storm-bard.glitch.me/wakeup"
+
+async function wakeup(){
+    let response = await fetch(wake_url, {
+        method: 'GET',
+    });
+    let responseText = await response.text();
+    console.log(responseText);
+}
+wakeup();
 
 let nums = {
     "one": "1",
