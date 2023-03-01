@@ -1,0 +1,326 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    text-align: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+.head {
+    display: flex;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    background-color: #141414;
+}
+
+.head :nth-child(1) {
+    margin-left: 12%;
+    color: #eeeeee;
+    font-size: 2.25rem;
+    font-family: 'Rubik';
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.head :nth-child(2) {
+    margin-left: 33.5%;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI';
+}
+
+.head :nth-child(3) {
+    margin-left: 3.5%;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI';
+}
+
+.head :nth-child(4) {
+    margin-left: 3.5%;
+    margin-right: 12%;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI';
+}
+
+.head :nth-child(2):hover,
+.head :nth-child(3):hover,
+.head :nth-child(4):hover {
+    color: #bbbbbb;
+}
+
+#main-wrapper{
+    min-height: 68vh;
+    margin: 5% 0;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    margin-top: 0.5rem;
+}
+
+.arrow-ini {
+    font-weight: 900;
+    text-align: center;
+    width: 3rem;
+    position: absolute;
+    top:25%;
+    right:0;
+    transform: rotatex(180deg);
+}
+
+.arrow-fin {
+    font-weight: 900;
+    text-align: center;
+    width: 3rem;
+    position: absolute;
+    top:35%;
+    right:0;
+    transform: rotatex(0deg);
+}
+
+@keyframes reverse-ani {
+    100% {
+        top: 35%;
+        transform: rotatex(0deg);
+    }
+}
+
+.reverse {
+    animation-name: reverse-ani;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes forward-ani {
+    100% {
+        top: 25%;
+        transform: rotatex(180deg);
+    }
+}
+
+.forward {
+    animation-name: forward-ani;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.open {
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    width: 20.2rem;
+    height: 3rem;
+    border: 0.125rem solid black;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    font-size: 1.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.options {
+    width: 20.2rem;
+    z-index: 1;
+    position: absolute;
+    border: 0.125rem solid black;
+    border-top: 0;
+    transition: height 0.25s;
+    overflow: hidden;
+    background-color: #eeeeee;
+    max-height: 15rem;
+    /* min-height: 3.2rem; */
+}
+.options:not(.active) {
+    display: none;
+    text-align: left;
+}
+
+.sub_drop, .sem_drop, .course_drop {
+    overflow-y: auto;
+}
+
+.opt {
+    text-align: left;
+    padding-left: 1rem;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 7rem;
+}
+
+.opt:hover {
+    background-color: aquamarine;
+}
+
+.other {
+    color: #909090;
+}
+
+.show {
+    display: block;
+}
+
+#submit {
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    margin-top: 2rem;
+    width: 10rem;
+    padding: 0.35%;
+    padding-bottom: 0.5%;
+    font-size: 1.5rem;
+    border: 0.125rem solid #141414;
+    border-radius: 5px;
+}
+#submit:hover {
+    background-color: #141414;
+    color: #eeeeee;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    background-color: #141414;
+    padding: 2.4rem 0% 1rem;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+#donate {
+    width: 16.8rem;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+#github {
+    width: 2.8rem;
+    height: 2.8%;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+#linkedin {
+    width: 2.8rem;
+    height: 2.8%;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+#discord {
+    width: 3.2rem;
+    height: 3.2%;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-height: 730px) {
+    footer {
+        position: static;
+    }
+}
+
+@media (max-width: 1200px) {
+    .head :nth-child(2) {
+        margin-left: 25%;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .head :nth-child(1) {
+        margin-left: 10%;
+    }
+
+    .head :nth-child(2) {
+        margin-left: 20%;
+    }
+
+    .head :nth-child(4) {
+        margin-right: 0%;
+    }
+}
+
+@media (max-width: 780px) {
+    .head :nth-child(1) {
+        margin-left: 6%;
+    }
+}
+
+@media (max-width: 750px) {
+    .head {
+        justify-content: center;
+    }
+
+    .head :nth-child(1) {
+        margin-left: 0;
+
+    }
+    .head :nth-child(2) {
+        display: none;
+    }
+
+    .head :nth-child(3) {
+        display: none;
+    }
+
+    .head :nth-child(4) {
+        display: none;
+    }
+
+    #submit {
+        padding: 0.5%;
+        padding-bottom: 0.75%;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 350px) {
+    html {
+        font-size: 12px;
+    }
+}

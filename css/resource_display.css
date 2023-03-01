@@ -1,0 +1,371 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    text-align: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* border: 1rem solid black; */
+}
+
+button {
+    cursor: pointer;
+}
+
+.head {
+    display: flex;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    background-color: #141414;
+}
+
+.head :nth-child(1) {
+    margin-left: 12%;
+    color: #eeeeee;
+    font-size: 2.25rem;
+    font-family: Rubik;
+    white-space: nowrap;
+}
+
+.head :nth-child(2) {
+    margin-left: 33.5%;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI';
+}
+
+.head :nth-child(3) {
+    margin-left: 3.5%;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI';
+}
+
+.head :nth-child(4) {
+    margin-left: 3.5%;
+    margin-right: 12%;
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 1.75rem;
+    font-family: 'Segoe UI';
+}
+
+.head :nth-child(2):hover,
+.head :nth-child(3):hover,
+.head :nth-child(4):hover {
+    color: #bbbbbb;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    min-height: 53vh;
+}
+
+.options {
+    margin-top: 4rem;
+    /* margin-left: 6rem; */
+    line-height: 3.5rem;
+    text-align: center;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 2rem;
+    color: #141414;
+}
+
+#head-css{
+    /* border: 0.4rem solid black; */
+    text-align: left;
+    padding: 0 7rem;
+}
+
+p {
+    /* margin-left: 6rem; */
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+
+#course , #semester, #subject {
+    color: rgb(69, 69, 69);
+    font-family: 'Segoe Ui';
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.op1 :nth-child(1),
+.op1 :nth-child(2),
+.op1 :nth-child(3) {
+    margin-top: 2rem;
+}
+
+.op2 :nth-child(1),
+.op2 :nth-child(2),
+.op2 :nth-child(3) {
+    margin-top: 1rem;
+}
+
+.ops {
+    width: 11rem;
+    height: 3.8rem;
+    padding: 1%;
+    border: 0.125rem solid #141414;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    background-color: #dfdfdf;
+    box-shadow: 1px 2px #545454;
+}
+
+.ops:hover {
+    background-color: #cccccc;
+    color: #141414;
+    transform: translate(0,2px);
+}
+
+.selected {
+    background-color: #141414 !important;
+    color: #eeeeee !important;
+    transform: translate(0, 0) !important;
+}
+
+.content {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.error, .loading, .dot-flashing{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe Ui';
+    font-size: 2rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* ---------- */
+.dot-flashing {
+    margin-top: 15px;
+    position: relative;
+    margin-left:49%;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background-color: #000000;
+    color: #000000;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+}
+.dot-flashing::before, .dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+.dot-flashing::before {
+    left: -25px;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background-color: #000000;
+    color: #000000;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+}
+.dot-flashing::after {
+    left: 25px;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    background-color: #000000;
+    color: #000000;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 1s;
+}
+  
+@keyframes dot-flashing {
+    0% {
+      background-color: #000000;
+    }
+    50%, 100% {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+/* ------------- */
+
+.element{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* border-top: 0.25rem solid gray; */
+    box-shadow: 0 0.25rem rgb(70, 62, 62);
+    border-radius: 5px;
+    width: 80vw;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Segoe Ui';
+}
+.element:hover{
+    background-color: #dcdcdc;
+    color: #141414;
+    transform: scale(1.025);
+}
+
+footer {
+    /* position: absolute;
+    bottom: 0;
+    z-index: 0;*/
+    margin-top: 8.75%;
+    width: 100%;
+    background-color: #141414;
+    padding: 2.4rem 0% 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#donate {
+    width: 16.8rem;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+#github {
+    width: 2.8rem;
+    height: 2.8%;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+#linkedin {
+    width: 2.8rem;
+    height: 2.8%;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+#discord {
+    width: 3.2rem;
+    height: 3.2%;
+    margin: 0.69%;
+    cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    section{
+        min-height: 58vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 14px;
+    }
+    .head :nth-child(2) {
+        margin-left: 25%;
+    }
+    section{
+        min-height: 62vh;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 13px;
+    }
+    section{
+        min-height: 66vh;
+    }
+}
+
+@media (max-width: 850px) {
+    .head :nth-child(1) {
+        margin-left: 10%;
+    }
+
+    .head :nth-child(2) {
+        margin-left: 20%;
+    }
+
+    .head :nth-child(4) {
+        margin-right: 0%;
+    }
+    section{
+        min-height: 68vh;
+    }
+}
+
+@media (max-width: 750px) {
+    .head :nth-child(1) {
+        margin-left: 6%;
+    }
+    section{
+        min-height: 70vh;
+    }
+}
+
+@media (max-width: 680px) {
+    .head {
+        justify-content: center;
+    }
+
+    .head :nth-child(1) {
+        margin-left: 0;
+
+    }
+
+    .head :nth-child(2) {
+        display: none;
+    }
+
+    .head :nth-child(3) {
+        display: none;
+    }
+
+    .head :nth-child(4) {
+        display: none;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .op1 :nth-child(1),
+    .op1 :nth-child(2),
+    .op1 :nth-child(3) {
+        margin-top: 1rem;
+    }
+    .op1,.op2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ops{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 11px;
+    }
+    section{
+        min-height: 75vh;
+    }
+}
+
+@media (max-width: 350px) {
+    html {
+        font-size: 10px;
+    }
+    section{
+        min-height: 78vh;
+    }
+}

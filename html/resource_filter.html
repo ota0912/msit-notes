@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Msit Notes</title>
+    <link rel="icon" href="../assets/logos/main-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/resource_filter.css">
+</head>
+
+<body>
+    <header class="head">
+        <h1>MSIT NOTES</h1>
+        <a href="../index.html">Home</a>
+        <a href="#">Resources</a>
+        <a onClick="document.getElementById('donate').scrollIntoView()">Support</a>
+    </header>
+    <div id="main-wrapper">
+        <h3>Course</h3>
+        <div id="course" class="dropdown">
+            <div class="arrow-ini course arrow" id="ramesh">^</div>
+            <button class="open course">Select Course</button>
+            <div class="options" id="course_drop">   
+                <button class="opt" onclick="selected('CSE',0)">CSE</button>
+                <button class="opt" onclick="selected('IT',0)">IT</button>
+                <button class="opt" onclick="selected('ECE',0)">ECE</button>
+                <button class="opt" onclick="selected('EEE',0)">EEE</button>
+                <button class="opt" onclick="selected('Applied Sciences',0)">Applied Sciences</button>
+            </div>
+        </div>
+        <h3>Semester</h3>
+        <div id="semester" class="dropdown">
+            <div class="arrow-ini semester arrow">^</div>
+            <button class="open semester">Select Semester</button>
+            <div class="options" id="sem_drop">   
+                <button class="opt sem hide" onclick="selected('One',1)">One</button>
+                <button class="opt sem hide" onclick="selected('Two',1)">Two</button>
+                <button class="opt sem hide" onclick="selected('Three',1)">Three</button>
+                <button class="opt sem hide" onclick="selected('Four',1)">Four</button>
+                <button class="opt sem hide" onclick="selected('Five',1)">Five</button>
+                <button class="opt sem hide" onclick="selected('Six',1)">Six</button>
+                <button class="opt sem hide" onclick="selected('Seven',1)">Seven</button>
+                <button class="opt sem hide" onclick="selected('Eight',1)">Eight</button>
+
+                <button id="course_first" class="opt other" disabled>Choose a Course first</button>
+            </div>
+        </div>
+        <h3>Subject</h3>
+        <div id="subject" class="dropdown">
+            <div class="arrow-ini subject arrow">^</div>
+            <button class="open subject">Select Subject</button>
+            <div class="options" id="sub_drop">   
+                <button class="opt hide sub asone" value="ap" onclick="selected('Applied Physics',2)">Applied Physics</button>
+                <button class="opt hide sub asone" value="ac" onclick="selected('Applied Chemistry',2)">Applied Chemistry</button>
+                <button class="opt hide sub asone" value="am" onclick="selected('Applied Mathematics',2)">Applied Mathematics</button>
+                <button class="opt hide sub asone" value="es" onclick="selected('Electrical Sciences',2)">Electrical Sciences</button>
+                <button class="opt hide sub asone" value="mp" onclick="selected('Manufacturing Processes',2)">Manufacturing Processes</button>
+                <button class="opt hide sub asone" value="hvpe" onclick="selected('Human Values and PE',2)">Human Values and PE</button>
+                <button class="opt hide sub asone" value="ic" onclick="selected('Indian Constitution',2)">Indian Constitution</button>
+                <button class="opt hide sub asone" value="eg" onclick="selected('Engineering Graphics',2)">Engineering Graphics</button>
+                <button class="opt hide sub asone" value="ap-lab" onclick="selected('Applied Physics (Lab)',2)">Applied Physics (Lab)</button>
+                <button class="opt hide sub asone" value="ac-lab" onclick="selected('Applied Chemsitry (Lab)',2)">Applied Chemsitry (Lab)</button>
+                <button class="opt hide sub asone" value="es-lab" onclick="selected('Electrical Sciences (Lab)',2)">Electrical Sciences (Lab)</button>
+                
+                <button class="opt hide sub astwo" value="ap2" onclick="selected('Applied Physics 2',2)">Applied Physics 2</button>
+                <button class="opt hide sub astwo" value="evs" onclick="selected('Environmental Studies',2)">Environmental Studies</button>
+                <button class="opt hide sub astwo" value="am2" onclick="selected('Applied Mathematics 2',2)">Applied Mathematics 2</button>
+                <button class="opt hide sub astwo" value="cs" onclick="selected('Communication Skills',2)">Communication Skills</button>
+                <button class="opt hide sub astwo" value="em" onclick="selected('Engineering Mechanics',2)">Engineering Mechanics</button>
+                <button class="opt hide sub astwo" value="pic" onclick="selected('Programming in C',2)">Programming in C</button>
+                <button class="opt hide sub astwo" value="wt" onclick="selected('Workshop Technology',2)">Workshop Technology</button>
+                <button class="opt hide sub astwo" value="eg2" onclick="selected('Engineering Graphics 2',2)">Engineering Graphics 2</button>
+                <button class="opt hide sub astwo" value="ap2-lab" onclick="selected('Applied Physics 2 (Lab)',2)">Applied Physics 2 (Lab)</button>
+                <button class="opt hide sub astwo" value="evs-lab" onclick="selected('Environmental Studies (Lab)',2)">Environmental Studies (Lab)</button>
+                <button class="opt hide sub astwo" value="pic-lab" onclick="selected('Programming in C (Lab)',2)">Programming in C (Lab)</button>
+
+                <button class="opt hide sub csethree" value="cm" onclick="selected('Computational Methods',2)">Computational Methods</button>
+                <button class="opt hide sub csethree" value="iks" onclick="selected('Indian Knowledge System',2)">Indian Knowledge System</button>
+                <button class="opt hide sub csethree" value="dm" onclick="selected('Discrete Mathematics',2)">Discrete Mathematics</button>
+                <button class="opt hide sub csethree" value="dlcd" onclick="selected('Digital Logic and Computer Design',2)">Digital Logic and Computer Design</button>
+                <button class="opt hide sub csethree" value="ds" onclick="selected('Data Structures',2)">Data Structures</button>
+                <button class="opt hide sub csethree" value="oops" onclick="selected('Object Oriented Programming using C++',2)">Object Oriented Programming using C++</button>
+                <button class="opt hide sub csethree" value="cm-lab" onclick="selected('Computational Methods (Lab)',2)">Computational Methods (Lab)</button>
+                <button class="opt hide sub csethree" value="dlcd-lab" onclick="selected('Digital Logic and Computer Design (Lab)',2)">Digital Logic and Computer Design (Lab)</button>
+                <button class="opt hide sub csethree" value="ds-lab" onclick="selected('Data Structures (Lab)',2)">Data Structures (Lab)</button>
+                <button class="opt hide sub csethree" value="oops-lab" onclick="selected('Object Oriented Programming using C++ (Lab)',2)">Object Oriented Programming using C++ (Lab)</button>
+
+                <button class="opt hide sub csefour" value="pslp" onclick="selected('Probability, Statistics and Linear Programming',2)">Probability, Statistics and Linear Programming</button>
+                <button class="opt hide sub csefour" value="tw" onclick="selected('Technical Writing',2)">Technical Writing</button>
+                <button class="opt hide sub csefour" value="toc" onclick="selected('Theory of Computation',2)">Theory of Computation</button>
+                <button class="opt hide sub csefour" value="cs" onclick="selected('Circuits and Systems ',2)">Circuits and Systems </button>
+                <button class="opt hide sub csefour" value="dbms" onclick="selected('Database Management Systems',2)">Database Management Systems</button>
+                <button class="opt hide sub csefour" value="java" onclick="selected('Programming in Java ',2)">Programming in Java </button>
+                <button class="opt hide sub csefour" value="pslp-lab" onclick="selected('Probability, Statistics and Linear Programming (Lab)',2)">Probability, Statistics and Linear Programming (Lab)</button>
+                <button class="opt hide sub csefour" value="cs-lab" onclick="selected('Circuits and Systems (Lab)',2)">Circuits and Systems (Lab)</button>
+                <button class="opt hide sub csefour" value="dbms-lab" onclick="selected('Database Management Systems (Lab)',2)">Database Management Systems (Lab)</button>
+                <button class="opt hide sub csefour" value="java-lab" onclick="selected('Programming in Java (Lab)',2)">Programming in Java (Lab)</button>
+
+                <button class="opt hide sub itthree" value="cm" onclick="selected('Computational Methods',2)">Computational Methods</button>
+                <button class="opt hide sub itthree" value="iks" onclick="selected('Indian Knowledge System',2)">Indian Knowledge System</button>
+                <button class="opt hide sub itthree" value="dm" onclick="selected('Discrete Mathematics',2)">Discrete Mathematics</button>
+                <button class="opt hide sub itthree" value="dlcd" onclick="selected('Digital Logic and Computer Design',2)">Digital Logic and Computer Design</button>
+                <button class="opt hide sub itthree" value="ds" onclick="selected('Data Structures',2)">Data Structures</button>
+                <button class="opt hide sub itthree" value="oops" onclick="selected('Object Oriented Programming using C++',2)">Object Oriented Programming using C++</button>
+                <button class="opt hide sub itthree" value="cm-lab" onclick="selected('Computational Methods (Lab)',2)">Computational Methods (Lab)</button>
+                <button class="opt hide sub itthree" value="dlcd-lab" onclick="selected('Digital Logic and Computer Design (Lab)',2)">Digital Logic and Computer Design (Lab)</button>
+                <button class="opt hide sub itthree" value="ds-lab" onclick="selected('Data Structures (Lab)',2)">Data Structures (Lab)</button>
+                <button class="opt hide sub itthree" value="oops-lab" onclick="selected('Object Oriented Programming using C++ (Lab)',2)">Object Oriented Programming using C++ (Lab)</button>
+
+                <button class="opt hide sub itfour" value="pslp" onclick="selected('Probability, Statistics and Linear Programming',2)">Probability, Statistics and Linear Programming</button>
+                <button class="opt hide sub itfour" value="tw" onclick="selected('Technical Writing',2)">Technical Writing</button>
+                <button class="opt hide sub itfour" value="toc" onclick="selected('Theory of Computation',2)">Theory of Computation</button>
+                <button class="opt hide sub itfour" value="cs" onclick="selected('Circuits and Systems ',2)">Circuits and Systems </button>
+                <button class="opt hide sub itfour" value="dbms" onclick="selected('Database Management Systems',2)">Database Management Systems</button>
+                <button class="opt hide sub itfour" value="java" onclick="selected('Programming in Java ',2)">Programming in Java </button>
+                <button class="opt hide sub itfour" value="pslp-lab" onclick="selected('Probability, Statistics and Linear Programming (Lab)',2)">Probability, Statistics and Linear Programming (Lab)</button>
+                <button class="opt hide sub itfour" value="cs-lab" onclick="selected('Circuits and Systems (Lab)',2)">Circuits and Systems (Lab)</button>
+                <button class="opt hide sub itfour" value="dbms-lab" onclick="selected('Database Management Systems (Lab)',2)">Database Management Systems (Lab)</button>
+                <button class="opt hide sub itfour" value="java-lab" onclick="selected('Programming in Java (Lab)',2)">Programming in Java (Lab)</button>
+
+                <button class="opt hide sub ecethree" value="cm" onclick="selected('Computational Methods',2)">Computational Methods</button>
+                <button class="opt hide sub ecethree" value="iks" onclick="selected('Indian Knowledge System',2)">Indian Knowledge System</button>
+                <button class="opt hide sub ecethree" value="sas" onclick="selected('Signals and Systems',2)">Signals and Systems</button>
+                <button class="opt hide sub ecethree" value="dlcd" onclick="selected('Digital Logic and Computer Design',2)">Digital Logic and Computer Design</button>
+                <button class="opt hide sub ecethree" value="ac" onclick="selected('Analog Communications',2)">Analog Communications</button>
+                <button class="opt hide sub ecethree" value="ae1" onclick="selected('Analog Electronics-I',2)">Analog Electronics-I</button>
+                <button class="opt hide sub ecethree" value="cm-lab" onclick="selected('Computational Methods (Lab)',2)">Computational Methods (Lab)</button>
+                <button class="opt hide sub ecethree" value="dlcd-lab" onclick="selected('Digital Logic and Computer Design (Lab)',2)">Digital Logic and Computer Design (Lab)</button>
+                <button class="opt hide sub ecethree" value="ac-lab" onclick="selected('Analog Communications (Lab)',2)">Analog Communications (Lab)</button>
+                <button class="opt hide sub ecethree" value="ae1-lab" onclick="selected('Analog Electronics-I (Lab)',2)">Analog Electronics-I (Lab)</button> 
+                <button class="opt hide sub ecethree" value="sas-lab" onclick="selected('Signals and Systems (Lab)',2)">Signals and Systems (Lab)</button> 
+
+                <button class="opt hide sub ecefour" value="pslp" onclick="selected('Probability, Statistics and Linear Programming',2)">Probability, Statistics and Linear Programming</button>
+                <button class="opt hide sub ecefour" value="tw" onclick="selected('Technical Writing',2)">Technical Writing</button>
+                <button class="opt hide sub ecefour" value="nas" onclick="selected('Network Analysis and Synthesis',2)">Network Analysis and Synthesis</button>
+                <button class="opt hide sub ecefour" value="mam" onclick="selected('Microprocessors and Microcontrollers',2)">Microprocessors and Microcontrollers</button>
+                <button class="opt hide sub ecefour" value="dc" onclick="selected('Digital Communications',2)">Digital Communications</button>
+                <button class="opt hide sub ecefour" value="ae2" onclick="selected('Analog Electronics-II',2)">Analog Electronics-II</button>
+                <button class="opt hide sub ecefour" value="eft" onclick="selected('Electromagnetic Field Theory',2)">Electromagnetic Field Theory</button>
+                <button class="opt hide sub ecefour" value="pslp-lab" onclick="selected('Probability, Statistics and Linear Programming (Lab)',2)">Probability, Statistics and Linear Programming (Lab)</button>
+                <button class="opt hide sub ecefour" value="mam-lab" onclick="selected('Microprocessors and Microcontrollers (Lab)',2)">Microprocessors and Microcontrollers (Lab)</button>
+                <button class="opt hide sub ecefour" value="dc-lab" onclick="selected('Digital Communications (Lab)',2)">Digital Communications (Lab)</button> 
+                <button class="opt hide sub ecefour" value="ae2-lab" onclick="selected('Analog Electronics-II (Lab)',2)">Analog Electronics-II (Lab)</button>
+                <button class="opt hide sub ecefour" value="nas-lab" onclick="selected('Network Analysis and Synthesis (Lab)',2)">Network Analysis and Synthesis (Lab)</button> 
+                
+                <button class="opt hide sub eeethree" value="cm" onclick="selected('Computational Methods',2)">Computational Methods</button>
+                <button class="opt hide sub eeethree" value="iks" onclick="selected('Indian Knowledge System',2)">Indian Knowledge System</button>
+                <button class="opt hide sub eeethree" value="sas" onclick="selected('Signals and Systems',2)">Signals and Systems</button>
+                <button class="opt hide sub eeethree" value="em" onclick="selected('Electrical Materials',2)">Electrical Materials</button>
+                <button class="opt hide sub eeethree" value="em1" onclick="selected('Electrical Machines-I',2)">Electrical Machines-I</button>
+                <button class="opt hide sub eeethree" value="eft" onclick="selected('Electromagnetic Field Theory',2)">Electromagnetic Field Theory</button>
+                <button class="opt hide sub eeethree" value="e1" onclick="selected('Electronics–I',2)">Electronics–I</button>
+                <button class="opt hide sub eeethree" value="cm-lab" onclick="selected('Computational Methods (Lab)',2)">Computational Methods (Lab)</button>
+                <button class="opt hide sub eeethree" value="em1-lab" onclick="selected('Electrical Machines–I (Lab)',2)">Electrical Machines–I (Lab)</button>
+                <button class="opt hide sub eeethree" value="eew-lab" onclick="selected('Electrical Engineering Workshop (Lab)',2)">Electrical Engineering Workshop (Lab)</button> 
+                <button class="opt hide sub eeethree" value="e1-lab" onclick="selected('Electronics-I (Lab)',2)">Electronics-I (Lab)</button> 
+
+                <button class="opt hide sub eeefour" value="pslp" onclick="selected('Probability, Statistics and Linear Programming',2)">Probability, Statistics and Linear Programming</button>
+                <button class="opt hide sub eeefour" value="tw" onclick="selected('Technical Writing',2)">Technical Writing</button>
+                <button class="opt hide sub eeefour" value="nas" onclick="selected('Network Analysis and Synthesis',2)">Network Analysis and Synthesis</button>
+                <button class="opt hide sub eeefour" value="em2" onclick="selected('Electrical Machines-II',2)">Electrical Machines-II</button>
+                <button class="opt hide sub eeefour" value="ps1" onclick="selected('Power Systems-I',2)">Power Systems-I</button>
+                <button class="opt hide sub eeefour" value="e2" onclick="selected('Electronics-II',2)">Electronics-II</button>
+                <button class="opt hide sub eeefour" value="pslp-lab" onclick="selected('Probability, Statistics and Linear Programming (Lab)',2)">Probability, Statistics and Linear Programming (Lab)</button>
+                <button class="opt hide sub eeefour" value="em2-lab" onclick="selected('Electrical Machines-II (Lab)',2)">Electrical Machines-II (Lab)</button>
+                <button class="opt hide sub eeefour" value="ps1-lab" onclick="selected('Power Systems-I (Lab)',2)">Power Systems-I (Lab)</button>
+                <button class="opt hide sub eeefour" value="nas-lab" onclick="selected('Network Analysis and Synthesis (Lab)',2)">Network Analysis and Synthesis (Lab)</button> 
+                <button class="opt hide sub eeefour" value="e2-lab" onclick="selected('Electronics-II (Lab)',2)">Electronics-II (Lab)</button> 
+
+                <!-- 
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button>
+                <button class="opt hide sub " value="" onclick="selected('',2)"></button> 
+                -->
+
+                <button id="sem_first" class="opt other" disabled>Choose a Semester first</button>
+                <button id="no_data" class="opt other hide" disabled>No Data Available!</button>
+            </div>
+        </div>
+        <br>
+        <button id="submit" onclick="submit()">Submit</button>
+    </div>
+    <footer>
+        <img onclick="redirect(0)" id="donate" src="../assets/logos/donate.png">
+        <img onclick="redirect(1)" id="github" src="../assets/logos/github.png">
+        <img onclick="redirect(2)" id="linkedin" src="../assets/logos/linkedin.png">
+        <img onclick="redirect(3)" id="discord" src="../assets/logos/discord.png">
+    </footer>
+    <script src="../js/resource_filter.js"></script>
+
+</body>

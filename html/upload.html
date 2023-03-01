@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../css/upload.css">
+    
+</head>
+
+<body>
+
+    <form action="http://localhost:8080/fileupload" target="stop_redirecting" method="post" enctype="multipart/form-data">
+        
+        <input type="file" id="file" onclick="file_toggle()" name="filetoupload" required>
+        
+        <br>
+        
+        <label for="course">Choose course:</label>
+        <select name="course" id="course" required>
+        
+            <option value="none" selected disabled hidden value>Select an Option</option>
+
+            <option value="cse">CSE</option>
+            <option value="it">IT</option>
+            <option value="ece">ECE</option>
+            <option value="eee">EEE</option>
+            <option value="as">Applied Sciences</option>
+        
+        </select>
+        
+        <br>
+        
+        <label for="semester">Choose sem:</label>
+        <select name="semester" id="semester" required>
+        
+            <option value="none" selected disabled hidden>Select an Option</option>
+
+            <option value="1" class="sem hide" id="s1">1</option>
+            <option value="2" class="sem hide" id="s2">2</option>
+            <option value="3" class="sem hide" id="s3">3</option>
+
+            <option value="other" class="other" disabled>Choose a course first</option>
+        
+        </select>
+
+        <br>
+
+        <label for="subject">Choose subject:</label>
+        <select name="subject" id="subject" required>
+
+            <option value="none" selected disabled hidden>Select an Option</option>
+
+            <option class="sub 1 as hide" value="ap">Applied Physics</option>
+            <option class="sub 1 as hide" value="ac">Applied Chemsitry</option>
+            <option class="sub 1 as hide" value="am">Applied Mathematics</option>
+            <option class="sub 1 as hide" value="es">Electrical Sciences</option>
+            <option class="sub 1 as hide" value="mp">Manufacturing Processes</option>
+            <option class="sub 1 as hide" value="hvpe">Human Values and Professional Ethics</option>
+            <option class="sub 1 as hide" value="ic">Indian Constitution</option>
+            <option class="sub 1 as hide" value="eg">Engineering Graphics</option>
+            <option class="sub 1 as hide" value="ap-lab">Applied Physics (Lab)</option>
+            <option class="sub 1 as hide" value="ac-lab">Applied Chemsitry (Lab)</option>
+            <option class="sub 1 as hide" value="es-lab">Electrical Sciences (Lab)</option>
+
+            <option class="sub 2 as hide" value="ap2">Applied Physics 2</option>
+            <option class="sub 2 as hide" value="evs">Environmental Studies</option>
+            <option class="sub 2 as hide" value="am2">Applied Mathematics 2</option>
+            <option class="sub 2 as hide" value="cs">Communication Skills</option>
+            <option class="sub 2 as hide" value="em">Engineering Mechanics</option>
+            <option class="sub 2 as hide" value="pic">Programming in C</option>
+            <option class="sub 2 as hide" value="wt">Workshop Technology</option>
+            <option class="sub 2 as hide" value="eg2">Engineering Graphics 2</option>
+            <option class="sub 2 as hide" value="ap2-lab">Applied Physics 2 (Lab)</option>
+            <option class="sub 2 as hide" value="evs-lab">Environmental Studies (Lab)</option>
+            <option class="sub 2 as hide" value="pic-lab">Programming in C (Lab)</option>
+
+            <option class="sub 3 cse hide" value="am3">Applied Mathematics 3</option>
+            <option class="sub 3 cse hide" value="fcs">Foundation of Computer Science</option>
+            <option class="sub 3 cse hide" value="stld">Switching Theory and Logic Design</option>
+            <option class="sub 3 cse hide" value="cs">Circuits and Systems</option>
+            <option class="sub 3 cse hide" value="ds">Data structure</option>
+            <option class="sub 3 cse hide" value="cgm">Computer Graphics and Multimedia</option>
+            <option class="sub 3 cse hide" value="stld-lab">Switching Theory and Logic Design (Lab)</option>
+            <option class="sub 3 cse hide" value="ds-lab">Data structure (Lab)</option>
+            <option class="sub 3 cse hide" value="cs-lab">Circuits and Systems (Lab)</option>
+            <option class="sub 3 cse hide" value="cgm-lab">Computer Graphics and Multimedia (Lab)</option>
+
+            <option value="other" class="other" disabled>Choose a semester first</option>
+
+        </select>
+        
+        <br>
+
+        <label for="type">Choose sem:</label>
+        <select name="type" id="type" required>
+        
+            <option value="none" selected disabled hidden>Select an Option</option>
+
+            <option value="assignments" class="type">Assignments</option>
+            <option value="class-notes" class="type">Class Notes</option>
+            <option value="viva-material" class="type">Viva Material</option>
+            <option value="pyq" class="type">PYQ</option>
+            <option value="practical-file" class="type">Practical File</option>
+            <option value="books" class="type">Books</option>
+
+        </select>
+
+        <br>
+
+        <input type="submit" onclick="form_submit()">
+
+    </form>
+
+    <iframe src="https://pastoral-storm-bard.glitch.me/fileupload" name="stop_redirecting" id="stop_redirecting" class="hide" style="border:none;"></iframe>
+    
+    <p id="uploading" class="hide">Uploading...</p>
+    <p id="uploaded" class="hide">Uploaded...</p>
+
+    <script src="../js/upload.js"></script>
+
+</body>
+
+</html>

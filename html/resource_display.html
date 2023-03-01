@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Msit Notes</title>
+    <link rel="icon" href="../assets/logos/main-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/resource_display.css">
+    <script src="../js/resource_display.js" defer></script>
+
+</head>
+
+<body>
+    <header class="head">
+        <h1>MSIT NOTES</h1>
+        <a href="../index.html">Home</a>
+        <a href="resource_filter.html">Resources</a>
+        <a onclick="document.getElementById('donate').scrollIntoView()">Support</a>
+    </header>
+    <section>
+        <article class="options">
+            <div id="head-css">
+                <p>Course : <span id="course"></span></p>
+                <p>Semester : <span id="semester"></span></p>
+                <p>Subject : <span id="subject"></span></p>
+            </div>
+            <div class="op1">
+                <button onclick="selected(0)" class="ops">Assignments</button>
+                <button onclick="selected(1)" class="ops">Class Notes</button>
+                <button onclick="selected(2)" class="ops">Viva Material</button>
+            </div>
+            <div class="op2">
+                <button onclick="selected(3)" class="ops">PYQ</button>
+                <button onclick="selected(4)" class="ops">Practical File</button>
+                <button onclick="selected(5)" class="ops">Books</button>
+            </div>
+        </article>
+    </section>
+    <article class="content">
+    </article>
+    <footer>
+        <img onclick="redirect(0)" id="donate" src="../assets/logos/donate.png">
+        <img onclick="redirect(1)" id="github" src="../assets/logos/github.png">
+        <img onclick="redirect(2)" id="linkedin" src="../assets/logos/linkedin.png">
+        <img onclick="redirect(3)" id="discord" src="../assets/logos/discord.png">
+    </footer>
+</body>
