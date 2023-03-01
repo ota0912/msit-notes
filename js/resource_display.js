@@ -9,6 +9,7 @@ const fsubject = sessionStorage.getItem("fsub");
 const content = document.getElementsByClassName("content")[0];
 
 const ops = document.getElementsByClassName("ops");
+const opts = document.getElementsByTagName("section")[0];
 
 document.getElementById("course").textContent = course;
 document.getElementById("semester").textContent = semester;
@@ -55,7 +56,9 @@ if (course){
         };
 
         async function postReq(obj){
-            
+
+            if(screen.width<=520){opts.style.minHeight = "64vh";}
+            else {opts.style.minHeight = "50vh";}
             content.innerHTML = "";
 
             let loading = document.createElement("p");
@@ -96,8 +99,11 @@ if (course){
                 };
                 content.appendChild(btn);
             }
+
+            content.scrollIntoView();
         }
         postReq(object);
+
     }
 
 }
