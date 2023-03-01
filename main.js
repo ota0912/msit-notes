@@ -42,6 +42,6 @@ prev.addEventListener("click", function(){
 
 function redirect(ind){
     if (ind==0){window.open('https://p.paytm.me/xCTH/zzjlmo6o');}
-    if (ind==1) return;
+    if (ind==1){window.open('https://github.com/ota0912/msit-notes/');}
     else{window.open('https://bio.link/msitnotes');}
 }
