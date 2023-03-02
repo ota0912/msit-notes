@@ -21,6 +21,20 @@
 
 - We accept content from different batches to maintain uniqueness.
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Express.js
+
+## Backend Server
+The backend server of the website is made entirely on Express.js and is currently posted <a href="https://github.com/ota0912/msit-notes-server">here</a>.
+
+# Live Demo
+The website is currently hosted on GitHub Pages. 
+<br>
+Here's a quick <a href="https://ota0912.github.io/Genz-Horoscope/">link</a> to the deployment.
 
 ## SHOW SOME LOVE BY STARRING THE REPOSITORY AND ANY CHANGES ARE WELCOMED
 > Create a PR Request, We would get back to you ;)
