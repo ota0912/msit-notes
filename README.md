@@ -5,7 +5,6 @@
 
 ## Purpose of Our Website  
 
-Purpose of Our Website
 - We envisioned a website to help the students of MSIT with the academic material collection.
 
 - A single platform where one can find everything ranging from assignments to viva material collected from the batch 2021.
