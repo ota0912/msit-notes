@@ -34,7 +34,7 @@ The backend server of the website is made entirely on Express.js and is currentl
 # Live Demo
 The website is currently hosted on GitHub Pages. 
 <br>
-Here's a quick <a href="https://ota0912.github.io/Genz-Horoscope/">link</a> to the deployment.
+Here's a quick <a href="https://ota0912.github.io/msit-notes/">link</a> to the deployment.
 
 ## SHOW SOME LOVE BY STARRING THE REPOSITORY AND ANY CHANGES ARE WELCOMED
 > Create a PR Request, We would get back to you ;)
