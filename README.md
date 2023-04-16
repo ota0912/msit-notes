@@ -11,7 +11,7 @@
 
 - We are determined to deliver and keep the website updated for future batches.
 
-## Our Expertise Unlike Namita Thapar ;)
+## Our Expertise
 
 - We provide memory-based viva questions which are very specific to MSIT.
 
