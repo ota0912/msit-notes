@@ -6,6 +6,9 @@
 
 body {
     background-color: #eeeeee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a, button {
@@ -161,6 +164,8 @@ a, button {
 
 .two {
     text-align: center;
+    flex-grow: 1;
+    margin-bottom: 4rem;
 }
 
 .two :nth-child(1) {
@@ -194,7 +199,6 @@ a, button {
 
 footer {
     width: 100%;
-    margin-top: 7%;
     background-color: #141414;
     padding: 2.4rem 0% 1rem;
     display: flex;

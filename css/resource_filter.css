@@ -9,6 +9,8 @@ body {
     text-align: center;
     overflow-x: hidden;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a, button {
@@ -65,6 +67,7 @@ a, button {
 #main-wrapper{
     min-height: 68vh;
     margin: 5% 0;
+    flex-grow: 1;
 }
 
 h3 {
