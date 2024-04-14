@@ -72,7 +72,7 @@ if (course){
             content.innerHTML = "";
 
             let loading = document.createElement("p");
-            loading.textContent = "Waiting for bitches to pull up!";
+            loading.textContent = "Waiting for notes to pull up!";
             loading.className = "loading";
             content.appendChild(loading);
 
